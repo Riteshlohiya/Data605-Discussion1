@@ -1,0 +1,33 @@
+---
+title: "Data605 Discussion1"
+author: "Ritesh Lohiya"
+date: "August 30, 2018"
+output: html_document
+---
+
+# I will be solving Exercise SSLE.C33. 
+
+#install.packages('matlib')
+
+```{r}
+library(matlib)
+```
+
+Create the equation:
+
+```{r}
+eq1 <- matrix(c(1, 1, -1,
+             1, -1,-1,
+             0,0,1), 3, 3, byrow=TRUE)
+colnames(eq1) <- paste0('x', 1:3)
+eq2 <- c(-1, -1, 2)
+showEqn(eq1, eq2)
+```
+
+Solve the equation:
+
+```{r}
+solve(eq1, eq2)
+```
+
+
